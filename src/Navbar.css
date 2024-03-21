@@ -1,0 +1,20 @@
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.navbar-collapse.show .sidebar {
+  transform: translateX(0);
+}
+
+.fixed-icons {
+  position: fixed;
+  right: 20px; /* Adjust as needed */
+  top: 10px; /* Adjust as needed */
+  display: flex;
+}
+
+.fixed-icons .icon-link {
+  margin-right: 10px; /* Adjust as needed */
+  margin-top: 10px;
+}

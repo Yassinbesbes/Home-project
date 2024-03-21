@@ -1,0 +1,129 @@
+.active{
+    color: red !important;
+}
+.title {
+    color: #00425e;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 70px;
+    white-space: pre-wrap;
+    line-height: 1;
+  }
+.button-title {
+  display: flex;
+  justify-content: left;
+  margin-top: 25px;
+}
+
+/* Styles for the "Book now" and "Read More" buttons */
+.Book-now,
+.Read-More {
+  background-color: #213c54;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.Read-More {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid black;
+}
+
+p {
+  color: #000000;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.brownback-image {
+    position: absolute;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    z-index: -1; /* Ensure the image is behind the Carousel */
+  }
+  
+  .x{
+    text-align: center;
+    margin-top: 50px;
+  }
+  .col-border {
+  
+    border-right: 5px solid #dddddd93; /* Adjust color and width as needed */
+  }
+  .Nom{
+    font-weight: 700;
+  
+  }
+  .Detaille{
+  margin-left: 25%;
+  margin-right: 25%;
+  }
+  
+  
+
+
+/* Media queries */
+@media (min-width: 1024px)  {
+  .all {
+    margin-top: 8%;
+  }
+
+  .title {
+    color: #00425e;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 70px;
+    white-space: pre-wrap;
+    line-height: 1;
+  }
+
+  p {
+    width: 55%;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .title {
+    line-height: 90px;
+  }
+
+  .all {
+    margin-top: 25px;
+  }
+
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .all {
+        margin-top: 25px;
+      }
+  .title{
+    text-align: center;
+    font-size: 30px;
+  }
+    p {
+    text-align: center;
+  }
+
+
+
+  .Book-now,
+.Read-More {
+  padding: 10px 25px;
+  font-size: 10px;
+  font-weight: 600;
+  margin: auto;
+}
+}
+
