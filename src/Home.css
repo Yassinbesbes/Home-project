@@ -1,14 +1,12 @@
-.active{
-    color: red !important;
-}
 .title {
-    color: #00425e;
-    font-size: 70px;
-    font-weight: 600;
-    line-height: 70px;
-    white-space: pre-wrap;
-    line-height: 1;
-  }
+  color: #00425e;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 70px;
+  white-space: pre-wrap;
+  line-height: 1;
+}
+
 .button-title {
   display: flex;
   justify-content: left;
@@ -46,33 +44,204 @@ p {
 }
 
 .brownback-image {
-    position: absolute;
-    object-fit: cover; /* Ensure the image covers the entire container */
-    z-index: -1; /* Ensure the image is behind the Carousel */
-  }
-  
-  .x{
-    text-align: center;
-    margin-top: 50px;
-  }
-  .col-border {
-  
-    border-right: 5px solid #dddddd93; /* Adjust color and width as needed */
-  }
-  .Nom{
-    font-weight: 700;
-  
-  }
-  .Detaille{
+  position: absolute;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  z-index: -1; /* Ensure the image is behind the Carousel */
+  width: 50%;
+}
+
+.x {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.col-border {
+  border-right: 5px solid #dddddd93; /* Adjust color and width as needed */
+}
+
+.Nom {
+  font-weight: 700;
+}
+
+.Detaille {
   margin-left: 25%;
   margin-right: 25%;
-  }
-  
-  
+}
+
+.carousel-indicators .active {
+  background-color: #00425F; /* Change to desired color */
+  height: 3px;
+}
+
+
+/* populaire liste items style */
+.xx {
+  background-color: #d9d9d9;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.All {
+  margin: auto;
+  max-width: 1200px; /* Set maximum width for the container */
+}
+
+.I {
+  width: 100%; /* Ensure image fills its container */
+  height: 100%; /* Set fixed height for the image */
+}
+
+
+h1 {
+  text-align: center;
+  margin: 60px;
+  position: relative;
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-size: 25px;
+  top:25px;
+  bottom: 25px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ensure container fills its parent */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Grey overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.overlay i {
+  color: white;
+  font-size: 24px;
+}
+
+/* Additional styles for Name and Price */
+.Name {
+  text-align: left;
+}
+
+.Price {
+  text-align: right;
+}
+
+/* Additional styles for spacing */
+.space {
+  margin-top: 20px;
+}
+
+
+
+
+/* Footer Parte */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-item {
+  margin: 0 10px;
+}
+
+.hutte-io {
+  font-style: italic;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.subscribe-info {
+  margin-top: 10px;
+}
+
+.footer-divider {
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+.footer-terms {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
+}
+
+.social-icon {
+  width: 30px;
+  margin: 0 10px;
+}
+
 
 
 /* Media queries */
-@media (min-width: 1024px)  {
+@media (min-width: 1024px) {
   .all {
     margin-top: 8%;
   }
@@ -89,41 +258,66 @@ p {
   p {
     width: 55%;
   }
-
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .title {
     line-height: 90px;
   }
-
   .all {
     margin-top: 25px;
   }
-
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .all {
-        margin-top: 25px;
-      }
-  .title{
+  .all {
+    margin-top: 25px;
+  }
+
+  .title {
     text-align: center;
     font-size: 30px;
   }
-    p {
+  
+  p {
     text-align: center;
   }
 
-
+  /*button style*/
+  .button-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
   .Book-now,
-.Read-More {
-  padding: 10px 25px;
-  font-size: 10px;
-  font-weight: 600;
-  margin: auto;
-}
-}
+  .Read-More {
+    padding: 10px 25px;
+    font-size: 10px;
+    font-weight: 600;
+    margin:0 5px;
+    width: auto;
+  }
+  /*image brown style */
+  .brownback-image{
+    display: none;
+  }
+  /*x display */
+  .x{
+    margin-top: 0;
+  }
+  .phone-image{
+    width: 25px;
+    height: 25px;
+  }
 
+  .Nom {
+    font-size: 10px;
+  }
+
+  .Detaille {
+    display: none;
+  }
+
+}

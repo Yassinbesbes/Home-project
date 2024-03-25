@@ -9,7 +9,7 @@ import './Navbar.css'; // Import your custom CSS file
 
 function AppNavbar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className='Navi' bg="light" expand="lg">
       <Container fluid>
         <img
           src={logo}
