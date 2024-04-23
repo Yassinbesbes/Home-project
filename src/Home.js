@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
@@ -6,33 +7,24 @@ import brownback from './images/brownback.png';
 import greysofa from './images/greysofa.png';
 import Contact from './images/Contact.png';
 import Bag from './images/Bag.png';
+import { FaStar } from "react-icons/fa6";
 import Shipping from './images/Shipping.png';
-import product1 from './images/product1.png';
-import product2 from './images/product2.png';
-import product3 from './images/product3.png';
-import product4 from './images/product4.png';
-import pub from './images/pub.png'
+import imageData from './imageData';
+import pub from './images/pub.png';
 import Facebook from './images/Facebook.png';
 import Twitter  from './images/Twitter.png' ;
 import Linkedin from './images/Linkedin.png';
 
 import './Home.css';
 
-const imageData = [
-  { title: 'white bag ', price: 100.00, src: product1 },
-  { title: 'Light bag ', price: 45.00, src: product2 },
-  { title: 'white bag ', price: 100.00, src: product3 },
-  { title: 'Light bag ', price: 45.00, src: product4 },
-
-  { title: 'white bag ', price: 100.00, src: product1 },
-  { title: 'Light bag ', price: 45.00, src: product2 },
-  { title: 'white bag ', price: 100.00, src: product3 },
-  { title: 'Light bag ', price: 45.00, src: product4 },
-
-];
 
 
 function Home() {
+  const navigate = useNavigate();
+
+    const handlePhotoClick = (productId) => {
+        navigate(`/product/${productId}`);
+    };
   return (
     <>
     <main>
@@ -87,38 +79,40 @@ function Home() {
     </Container>
 
     <div className='xx'>
-      <Container >
-        <h1>Enjoy our products </h1>
-        {Array.from(Array(Math.ceil(imageData.length / 4)), (_, index) => (
-          <Row key={index}>
-            {imageData.slice(index * 4, index * 4 + 4).map((item, idx) => ( 
-
-              <Col key={idx} xs={6} sm={3} className="image-col"> {/* Use idx for key */}
-                <div className="image-container">
-                  <Image className="I" src={item.src} fluid />
-                  <div className="overlay">
+    <Container className="products-section">
+      <h1>Enjoy our products</h1>
+      <Row>
+          {imageData.map((item, idx) => (
+              <Col key={idx} xs={6} sm={3} className="product-col">
+				        <div style={{ color: '#f6dc5b', float:'right' }}>
+                  <a href="#action/3.3" style={{ color: 'black', fontSize: '13px', textDecoration:'none'}} >4.12</a> 
+                  <FaStar />  
+                </div>
+                  <div>
+                      <Image
+                          src={item.src}
+                          alt={item.title}
+                          onClick={() => handlePhotoClick(idx)}
+                          style={{ cursor: 'pointer' }}
+                          fluid
+                      />
+                      <div className="overlay" />
                   </div>
-                </div>
-                <div>
                   <Row>
-                    <Col className="Name">{item.title}</Col>
-                    <Col className="Price">{item.price} dt</Col>
+                      <Col className="Name">{item.title}</Col>
+                      <Col className="Price">{item.price} dt</Col>
                   </Row>
-                </div>
-
-                {(idx === 3) && <div style={{marginTop: '50px'}}></div>} 
               </Col>
-            ))}
-          </Row>
-        ))}
+          ))}
+      </Row>
       </Container>
     </div>
 
     <hr />
 
     <div className='title-detaille' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',margin:'10px'  }}>
-      <h1>Every Detail Matters</h1>
-      <h6 style ={{textAlign:'center'}}>WE ARE SPECIALIZED IN ADORNMENTS, THAT BRING CHARM TO ANY ENVIRONMENT.</h6>
+      <h1 style={{ marginBottom: '30px' }}>Every Detail Matters</h1>
+      <h6 style ={{textAlign:'center', color:'#d6d6d6'}}>WE ARE SPECIALIZED IN ADORNMENTS, THAT BRING CHARM TO ANY ENVIRONMENT.</h6>
       <p style ={{textAlign:'center'}}>There are multiples of high quality pieces, with styles that transition from classic to contemporary. An exclusive selection of lampshades, vases, murals, pillows, paintings and many gifts to compose great projects. In order selection, a mix of basic style, stricter customization and more compact dimensions, composing sophisticated and exclusive environments.</p>
     </div>
   <Image className='hand_made' src={pub} fluid />
@@ -160,24 +154,26 @@ function Home() {
           </ul>
         </div>
         <div className="footer-column subscribe">
+        <div class="email">
           <h2 className="footer-heading">Subscribe</h2>
-          <form className="subscribe-form">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="subscribe-input"
-            />
-            <button className="subscribe-btn">Subscribe</button>
-          </form>
-          <p className="subscribe-info">
-            Hello, we are Lift Media. Our goal is to translate the way
-            companies engage with their clients and their team.
-          </p>
+            <form className="subscribe-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="subscribe-input"
+              />
+              <button className="subscribe-btn">Subscribe</button>
+            </form>
+            <p className="subscribe-info">
+              Hello, we are Lift Media. Our goal is to translate the way
+              companies engage with their clients and their team.
+            </p>
+          </div>
         </div>
       </div>
       <div className="footer-divider" />
       <div className="footer-terms">
-        <ul className="footer-list">
+        <ul className="footer-liste-terms">
           <li className="footer-item">Terms</li>
           <li className="footer-item">Privacy</li>
           <li className="footer-item">Cookies</li>

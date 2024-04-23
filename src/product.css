@@ -1,0 +1,144 @@
+/* Style for the detaille class */
+.detaille {
+    width: 100%; /* Full width */
+    text-align: left; /* Align text to the left */
+    margin-left: 5px; /* Adds a left margin for better spacing */
+    font-size: 18px;
+}
+
+/* Style for the container that holds the image and description */
+.Image-product {
+    background-color: #F6F6F4; /* Light background color */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+}
+
+/* Style for the product photo */
+.product-photo {
+    width: 70%; /* Occupies 70% of the column width */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Ensures the image is contained within the bounds */
+}
+
+/* Custom styling for the row containing the product title and heart icon */
+.product-title-row {
+    display: flex; /* Display as a flex container */
+    align-items: center; /* Vertically center the elements */
+    justify-content: space-between; /* Distribute space evenly */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+}
+.myCustomButton {
+    background-color: #00425F; /* Change the background color */
+    color: white; /* Change the text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove the border */
+    border-radius: 50px; /* Add border radius */
+    cursor: pointer; /* Change cursor style */
+    font-size: 16px; /* Change font size */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the button in its container */
+}
+.myCustomButton:hover {
+    background-color: #ffffff;
+    border: 2px solid black;
+    color: black;
+}
+.Stock-Position{
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    background-color: #d9d9d9;
+}
+.Stock-Position {
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto; /* Centering the element and setting margin top */
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+.titre {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stock-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.store-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.stock-status {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.in-stock {
+    background-color: #009933;
+    color: white;
+}
+
+.out-of-stock {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Stock-Position {
+        width: 100%; /* Full width on smaller screens */
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+    
+    .stock-item {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .Stock-Position {
+        padding: 0.5rem; /* Further reduce padding on very small screens */
+    }
+    
+    .stock-item {
+        font-size: 0.8rem; /* Even smaller font size */
+    }
+}
+
+
+/* Responsive media queries */
+@media (min-width: 1024px) {
+    /* Add styles for screens wider than 1024px */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Add styles for tablet screens */
+}
+
+@media (max-width: 768px) {
+    /* Add styles for mobile screens */
+    .detaille {
+        text-align: left; /* Align text to the left */
+        margin-left: 5px; /* Adjust margin for better layout */
+    }
+}

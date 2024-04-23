@@ -169,11 +169,15 @@ body {
 .footer-column {
   flex: 1;
   margin-right: 20px;
+  
 }
 
 .footer-heading {
   font-size: 1.2rem;
   font-weight: bold;
+}
+.email > p{
+  font-size: 15px;
 }
 
 .footer-list {
@@ -199,6 +203,8 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: auto;
+  height: auto;
 }
 
 .subscribe-btn {
@@ -224,12 +230,15 @@ body {
 .footer-terms {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+}
+.footer-liste-terms{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer-social {
   display: flex;
-  justify-content: right;
   margin-right: 20px;
 }
 
@@ -258,6 +267,17 @@ body {
   p {
     width: 55%;
   }
+  .email{
+    background-color: #1f3b860d;
+    max-height: 345px;
+    max-width: 482px;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+  } 
+  .footer-social {
+    justify-content: right;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -266,6 +286,11 @@ body {
   }
   .all {
     margin-top: 25px;
+  }
+  .footer-social {
+    
+    justify-content: center;
+  
   }
 }
 
@@ -318,6 +343,9 @@ body {
 
   .Detaille {
     display: none;
+  }
+  .footer-social {
+    justify-content: center;
   }
 
 }
