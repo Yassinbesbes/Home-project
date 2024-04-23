@@ -3,7 +3,9 @@
     width: 100%; /* Full width */
     text-align: left; /* Align text to the left */
     margin-left: 5px; /* Adds a left margin for better spacing */
-    font-size: 18px;
+    font-size: 14px;
+    margin-top: -24px;
+
 }
 
 /* Style for the container that holds the image and description */
@@ -22,86 +24,43 @@
 }
 
 /* Custom styling for the row containing the product title and heart icon */
-.product-title-row {
-    display: flex; /* Display as a flex container */
-    align-items: center; /* Vertically center the elements */
-    justify-content: space-between; /* Distribute space evenly */
-    margin-bottom: 10px; /* Add margin at the bottom for spacing */
-}
+
 .myCustomButton {
-    background-color: #00425F; /* Change the background color */
-    color: white; /* Change the text color */
+    background-color: #b8b8b8; /* Change the background color */
+    color: rgb(0, 0, 0); /* Change the text color */
     padding: 10px 20px; /* Add padding */
     border: none; /* Remove the border */
     border-radius: 50px; /* Add border radius */
     cursor: pointer; /* Change cursor style */
     font-size: 16px; /* Change font size */
     display: flex; /* Use flexbox layout */
-    justify-content: center; /* Center items horizontally */
+    justify-content: flex-end; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     margin: 0 auto; /* Center the button in its container */
+    
 }
 .myCustomButton:hover {
     background-color: #ffffff;
     border: 2px solid black;
     color: black;
 }
-.Stock-Position{
-    width: 500px;
-    height: 500px;
-    margin-top: 20px;
-    background-color: #d9d9d9;
-}
-.Stock-Position {
-    max-width: 700px;
-    height: auto;
-    margin: 20px auto; /* Centering the element and setting margin top */
-    background-color: #e3e3e3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    box-sizing: border-box; /* Ensures padding is included in the width calculation */
-}
+.buyButton {
+    background-color: #00425F; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Border removal */
+    border-radius: 50px; /* Border radius */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size (consistent with .myCustomButton) */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 5px auto; /* Center the button in its container */
+    width: 142px;}
+    .buyButton:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Little shadow effect on hover */
+    }
 
-.titre {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.stock-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.stock-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-
-.store-name {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.stock-status {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.in-stock {
-    background-color: #009933;
-    color: white;
-}
-
-.out-of-stock {
-    background-color: #ff0000;
-    color: white;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
