@@ -6,11 +6,11 @@ import product4 from './images/product4.png';
 const imageData = [
   {
     title: 'Salon',
-    price: 100.00,
+    price: 99.98,
     src: product1,
     details: 'Multiple high-quality pieces, with styles transitioning from classic to contemporary. An exclusive selection of lampshades, vases, murals, pillows, paintings, and many gifts to compose great projects. In order selection, a mix of basic style, stricter customization, and more compact dimensions to compose sophisticated and exclusive environments.',
     propos_de_ces_article: `
-    À propos de cet article:
+    
     <ul>
         <li>ENSEMBLE SALON DE JARDIN COMPLET: Cet ensemble salon de jardin est composé d'un canapé 2 places, de deux fauteuils et d'une table basse assortie, idéal pour les jardins, terrasses, balcons, etc.</li>
         <li>GRAND CONFORT: Salon de jardin extérieur 4 personnes doté de 3 coussins rembourrés mousse de 12 cm d'épaisseur grand confort. Coussins zippés déhoussables et lavables pour un nettoyage et entretien faciles.</li>

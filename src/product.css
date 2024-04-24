@@ -3,10 +3,18 @@
     width: 100%; /* Full width */
     text-align: left; /* Align text to the left */
     margin-left: 5px; /* Adds a left margin for better spacing */
-    font-size: 14px;
-    margin-top: -24px;
+    font-size: 18px;
 
 }
+/*style of the table*/
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+  }
+  th, td{
+    padding:  10px !important;
+  }
 
 /* Style for the container that holds the image and description */
 .Image-product {
@@ -18,7 +26,7 @@
 
 /* Style for the product photo */
 .product-photo {
-    width: 70%; /* Occupies 70% of the column width */
+    width: 60%; /* Occupies 70% of the column width */
     height: auto; /* Maintains the aspect ratio */
     object-fit: contain; /* Ensures the image is contained within the bounds */
 }
@@ -45,10 +53,10 @@
     color: black;
 }
 .buyButton {
-    background-color: #00425F; /* Background color */
-    color: #ffffff; /* Text color */
+    border:2px solid #00425F; /* Background color */
+    background-color: white;
+    color: #00425f; /* Text color */
     padding: 10px 20px; /* Padding */
-    border: none; /* Border removal */
     border-radius: 50px; /* Border radius */
     cursor: pointer; /* Cursor style */
     font-size: 16px; /* Font size (consistent with .myCustomButton) */
@@ -56,11 +64,21 @@
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     margin: 5px auto; /* Center the button in its container */
-    width: 142px;}
+    width: 100%;}
     .buyButton:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Little shadow effect on hover */
+        background-color: #00425F;
+        color: #ffffff;
     }
 
+/*underline */
+.underline {
+    border-bottom: 2px solid black; /* Customize line thickness and color */
+    display: inline-block; /* Make sure the element is treated as inline */
+    position: relative;
+    padding-bottom: 2px; /* Add padding to create space between text and line */
+    bottom: -16px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

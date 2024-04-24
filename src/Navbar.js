@@ -22,7 +22,7 @@ function AppNavbar() {
           <Nav className="d-lg-flex"> {/* Display only on lg and larger screens */}
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#our-story">Our Story</Nav.Link>
-            <Nav.Link href="#our-story">Collection</Nav.Link>
+            <Nav.Link href="/collection">Collection</Nav.Link>
             <Nav.Link href="#gallery">Gallery</Nav.Link>
 
             <NavDropdown title="Contact Us" id="basic-nav-dropdown">
