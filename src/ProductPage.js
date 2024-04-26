@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Heart from 'react-animated-heart';
 import Image from 'react-bootstrap/Image';
 import imageData from './imageData';
-import cross from './images/cross.gif';
 import './product.css';
 
 function ProductPage() {

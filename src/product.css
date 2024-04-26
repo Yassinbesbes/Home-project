@@ -4,17 +4,13 @@
     text-align: left; /* Align text to the left */
     margin-left: 5px; /* Adds a left margin for better spacing */
     font-size: 18px;
-
 }
 /*style of the table*/
 table, th, td {
     border: 1px solid black;
-    border-collapse: collapse;
-    
-  }
-  th, td{
-    padding:  10px !important;
-  }
+    border-collapse: collapse; 
+}
+th, td{padding:  10px !important;}
 
 /* Style for the container that holds the image and description */
 .Image-product {
@@ -32,7 +28,6 @@ table, th, td {
 }
 
 /* Custom styling for the row containing the product title and heart icon */
-
 .myCustomButton {
     background-color: #b8b8b8; /* Change the background color */
     color: rgb(0, 0, 0); /* Change the text color */
@@ -45,17 +40,17 @@ table, th, td {
     justify-content: flex-end; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     margin: 0 auto; /* Center the button in its container */
-    
 }
+
 .myCustomButton:hover {
     background-color: #ffffff;
     border: 2px solid black;
     color: black;
 }
+
 .buyButton {
-    border:2px solid #00425F; /* Background color */
-    background-color: white;
-    color: #00425f; /* Text color */
+    background-color: #00425F;
+    color: #ffffff; /* Text color */
     padding: 10px 20px; /* Padding */
     border-radius: 50px; /* Border radius */
     cursor: pointer; /* Cursor style */
@@ -64,11 +59,14 @@ table, th, td {
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     margin: 5px auto; /* Center the button in its container */
-    width: 100%;}
-    .buyButton:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Little shadow effect on hover */
-        background-color: #00425F;
-        color: #ffffff;
+    width: 100%;
+}
+
+.buyButton:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Little shadow effect on hover */
+    color: #000000;
+    border:2px solid #00425F; /* Background color */
+    background-color: white;
     }
 
 /*underline */
