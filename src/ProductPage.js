@@ -7,6 +7,7 @@ import Heart from 'react-animated-heart';
 import Image from 'react-bootstrap/Image';
 import imageData from './imageData';
 import './product.css';
+import CommentSection from './CommentSection';
 
 function ProductPage() {
     const { id } = useParams();
@@ -114,9 +115,8 @@ function ProductPage() {
                 <div  style={{ textAlign: 'center', fontSize:"30px"}}><span className='underline'>Product Description</span></div>
                 <hr />
                 <span>
-                    Nous ne savons pas quand cet article sera de nouveau approvisionné ni s'il le sera.
+                    Nous ne savons pas quand cet article sera de nouveau approvisionné ni s'il le sera:
                 </span>
-                
                 
                 <span>
                     <div style={{ fontSize: "15px" }}
@@ -139,6 +139,7 @@ function ProductPage() {
                     </div>
                 </span>
             </div>
+            <CommentSection/>
         </Container>
     );
 }
