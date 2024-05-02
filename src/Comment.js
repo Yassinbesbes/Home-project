@@ -102,7 +102,7 @@ function CommentSection() {
                             halfIcon={<i className="fa fa-star-half-alt"></i>}
                             fullIcon={<i className="fa fa-star"></i>}
                             activeColor="#ffd700"
-                        />
+                        / >
                     </li>
                 ))}
             </ul>

@@ -12,7 +12,7 @@ function Collection() {
 
     return (
         <div>
-            <Container className="products-section">
+            <Container >
                 {/* Loop to display the message three times */}
                 {[...Array(3)].map((_, i) => (
                 
@@ -30,8 +30,8 @@ function Collection() {
                                 <div className="overlay" />
                             </div>
                             <Row className="product-info">
-                                <Col className="product-name">{item.title}</Col>
-                                <Col className="product-price">{item.price} dt</Col>
+                                <Col className="Name">{item.title}</Col>
+                                <Col className="Price">{item.price} dt</Col>
                             </Row>
                         </Col>
                     ))}

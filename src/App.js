@@ -9,11 +9,11 @@ function App() {
 return (
   <Router>
     <div>
-    <AppNavbar />
+      <AppNavbar />
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product/:id" element={<ProductPage />} />
-      <Route path="/collection" element={<Collection />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/collection" element={<Collection />} />
       </Routes>
     </div>
   </Router>

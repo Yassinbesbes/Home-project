@@ -96,7 +96,7 @@ function Home() {
                           style={{ cursor: 'pointer' }}
                           fluid
                       />
-                      <div className="overlay" />
+                      
                   </div>
                   <Row>
                       <Col className="Name">{item.title}</Col>
@@ -164,10 +164,10 @@ function Home() {
               />
               <button className="subscribe-btn">Subscribe</button>
             </form>
-            <p className="subscribe-info">
+            <span className="subscribe-info">
               Hello, we are Lift Media. Our goal is to translate the way
               companies engage with their clients and their team.
-            </p>
+            </span>
           </div>
         </div>
       </div>
