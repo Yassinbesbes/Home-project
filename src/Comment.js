@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactStars from 'react-rating-stars-component';
-import './CommentSection.css';
+import './Home.css';
 
 function CommentSection() {
     // State variables

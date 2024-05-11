@@ -1,3 +1,86 @@
+/*==================Nabar.css=====================*/
+/* Home.css */
+
+/* Style for navbar links */
+.nav-link {
+  position: relative;
+  color: black; /* Adjust the color as desired */
+  text-decoration: none;
+  padding: 2px; /* Padding for better spacing */
+  transition: color 0.5s ease-in-out; /* Smooth color transition */
+}
+
+/* Create an elegant underline effect on hover */
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Offset the underline slightly */
+  left: 0;
+  width: 100%; /* Full width */
+  height: 2px; /* Adjust the height as desired */
+  background-color: black; /* Adjust the color as desired */
+  opacity: 0.8; /* Make the underline fully visible */
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Custom easing for smooth animation */
+  border-radius: 20px;
+
+}
+
+/* Initial state for underline (hidden) */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Offset the underline slightly */
+  left: 0;
+  width: 100%; /* Full width */
+  height: 2px;
+  background-color: black; /* Adjust the color as desired */
+  opacity: 0; /* Hide the underline */
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Same easing function */
+  border-radius: 20px;
+}
+
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.navbar-collapse.show .sidebar {
+  transform: translateX(0);
+}
+
+.fixed-icons {
+  position: relative;
+  right: 20px; /* Adjust as needed */
+  display: flex;
+}
+
+.fixed-icons .icon-link {
+  margin-right: 10px; /* Adjust as needed */
+  margin-top: 10px;
+}
+
+/* Responsive styles */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .fixed-icons {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+  }
+}
+@media (max-width: 768px) {
+  .fixed-icons {
+    position: fixed;
+    right: 20px; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
+    display: flex;
+  }
+
+
+}
+
+
+/*================HomePage Style=====================*/
 .title {
   color: #00425e;
   font-size: 70px;
@@ -331,4 +414,172 @@ body {
     justify-content: center;
   }
 
+}
+
+
+
+/*======================product.css========================*/
+
+/* Style for the detaille class */
+.detaille {
+  width: 100%; /* Full width */
+  text-align: left; /* Align text to the left */
+  margin-left: 5px; /* Adds a left margin for better spacing */
+  font-size: 18px;
+}
+/*style of the table*/
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; 
+}
+th, td{padding:  10px !important;}
+
+/* Style for the container that holds the image and description */
+.Image-product {
+  background-color: #F6F6F4; /* Light background color */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Style for the product photo */
+.product-photo {
+  width: 60%; /* Occupies 70% of the column width */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: contain; /* Ensures the image is contained within the bounds */
+}
+
+/* Custom styling for the row containing the product title and heart icon */
+.myCustomButton {
+  background-color: #b8b8b8; /* Change the background color */
+  color: rgb(0, 0, 0); /* Change the text color */
+  padding: 10px 20px; /* Add padding */
+  border: none; /* Remove the border */
+  border-radius: 50px; /* Add border radius */
+  cursor: pointer; /* Change cursor style */
+  font-size: 16px; /* Change font size */
+  display: flex; /* Use flexbox layout */
+  justify-content: flex-end; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin: 0 auto; /* Center the button in its container */
+}
+
+.myCustomButton:hover {
+  background-color: #ffffff;
+  border: 2px solid black;
+  color: black;
+}
+
+.buyButton {
+  background-color: #00425F;
+  color: #ffffff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border-radius: 50px; /* Border radius */
+  cursor: pointer; /* Cursor style */
+  font-size: 16px; /* Font size (consistent with .myCustomButton) */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin: 5px auto; /* Center the button in its container */
+  width: 100%;
+}
+
+.buyButton:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Little shadow effect on hover */
+  color: #000000;
+  border:2px solid #00425F; /* Background color */
+  background-color: white;
+  }
+
+/*underline */
+.underline {
+  border-bottom: 2px solid black; /* Customize line thickness and color */
+  display: inline-block; /* Make sure the element is treated as inline */
+  position: relative;
+  padding-bottom: 2px; /* Add padding to create space between text and line */
+  bottom: -16px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Stock-Position {
+      width: 100%; /* Full width on smaller screens */
+      padding: 1rem; /* Reduce padding on smaller screens */
+  }
+  
+  .stock-item {
+      font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .Stock-Position {
+      padding: 0.5rem; /* Further reduce padding on very small screens */
+  }
+  
+  .stock-item {
+      font-size: 0.8rem; /* Even smaller font size */
+  }
+}
+
+
+/* Responsive media queries */
+@media (min-width: 1024px) {
+  /* Add styles for screens wider than 1024px */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Add styles for tablet screens */
+}
+
+@media (max-width: 768px) {
+  /* Add styles for mobile screens */
+  .detaille {
+      text-align: left; /* Align text to the left */
+      margin-left: 5px; /* Adjust margin for better layout */
+  }
+}
+
+
+/*======================= comment Sections=============================*/
+.Stars {
+  /* Set the width and height of the rectangle */
+  width: 250px;
+  height: 250px;
+  
+  /* Center the rectangle on the page */
+  position: absolute;
+  top: -200%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Set the background color */
+  background-color: white;
+  
+  /* Set the z-index */
+  z-index: 999;
+  
+  /* Center the content inside the rectangle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/*==================== About.css===============================*/
+.containerAbout {
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }

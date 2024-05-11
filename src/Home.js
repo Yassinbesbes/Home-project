@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { Container, Row, Col } from 'react-bootstrap';
+import Stack from '@mui/material/Stack';
 import Carousel from 'react-bootstrap/Carousel';
 import brownback from './images/brownback.png';
 import greysofa from './images/greysofa.png';
@@ -35,8 +36,11 @@ function Home() {
           <div className='title'>Modern<br />Furniture</div>
           <p>We combine interior and exterior design services and often provide them as a single solution.</p>
           <div className='button-title'>
+            
+          <Stack direction="row" spacing={2}>
             <button className='Book-now'>Book now</button>
             <button className='Read-More'>Read More</button>
+          </Stack>
           </div>
         </Col>
         {/* Right column with image */}

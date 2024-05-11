@@ -7,7 +7,7 @@ import Heart from 'react-animated-heart';
 import Image from 'react-bootstrap/Image';
 import imageData from './imageData';
 import ReactStars from 'react-rating-stars-component';
-import './product.css';
+import './Home.css';
 
 function ProductPage() {
         // State variables
@@ -145,7 +145,7 @@ function ProductPage() {
                     <Row>
                         <Col>
                             <p className="detaille">{product.details}</p>
-                            <span style={{fontSize:"20px"}}>Quentity</span><br></br>
+                            <span style={{fontSize:"20px"}}>Quantity :</span><br></br>
                             <div style={{ padding: "10px", display: 'flex', alignItems: 'center' }}>
                                 
                                 <button
