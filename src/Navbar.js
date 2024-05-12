@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react'; // Import useState
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
-
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -15,6 +13,12 @@ import logo from './images/logo.png';
 import './Home.css'; // Import your custom CSS file
 
 function AppNavbar() {
+  const [showSearch, setShowSearch] = useState(false); // State for search bar visibility
+
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
+  };
+
   const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
       right: -3,
@@ -23,6 +27,7 @@ function AppNavbar() {
       padding: '0 4px',
     },
   }));
+
   return (
     <Navbar className='Navi' bg="light" expand="lg">
       <Container fluid>
@@ -35,41 +40,51 @@ function AppNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
           <Nav className="d-lg-flex"> {/* Display only on lg and larger screens */}
-            <Nav.Link href="/" className="nav-link">Home</Nav.Link>
-            <Nav.Link href="/collection" className="nav-link">Store</Nav.Link>
+            <Nav.Link href="/Home" className="nav-link">Home</Nav.Link>
+            <Nav.Link href="/Store" className="nav-link">Store</Nav.Link>
             <Nav.Link href="#gallery" className="nav-link">Collection</Nav.Link>
 
             <NavDropdown title="See More" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/Aboutus">About Us</NavDropdown.Item>
+              <NavDropdown.Item href="/Aboutus">About Us</NavDropdown.Item>
               <NavDropdown.Item href="/Contactus">Contact Us</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
 
         <div className="fixed-icons"> {/* Display all icons in a horizontal line */}
-        <Nav.Link >
-        <IconButton aria-label="cart">
+          <div>
+            <IconButton aria-label="cart" onClick={toggleSearch}>
               <StyledBadge color="secondary">
-          <SearchIcon  />
-          </StyledBadge>
+                <SearchIcon />
+              </StyledBadge>
             </IconButton>
-        </Nav.Link>
-        <Nav.Link>
+            {showSearch && (
+              <input
+                className='searchbar'
+                type="text"
+                placeholder="Search..."
+                onChange={(e) => console.log('Search query:', e.target.value)}
+              />
+            )}
+          </div>
 
+          <div>
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={4} color="error">
                 <ShoppingCartIcon />
               </StyledBadge>
             </IconButton>
-            </Nav.Link>
-          <Nav.Link >
-          <IconButton aria-label="cart">
-              <StyledBadge  color="secondary">
-          <PersonIcon />
-          </StyledBadge>
+          </div>
+
+          <div>
+            <IconButton aria-label="cart">
+              <StyledBadge color="secondary">
+                <PersonIcon />
+              </StyledBadge>
             </IconButton>
-          </Nav.Link>
+          </div>
         </div>
+
       </Container>
     </Navbar>
   );

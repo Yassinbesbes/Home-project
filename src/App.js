@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppNavbar from './Navbar';
 import Home from './Home'; // Import your Home component
 import ProductPage from './ProductPage';
-import Collection from './collection'
+import Store from './Store'
 import Contact from './Contactus';
 import Aboutus from './Aboutus';
 
@@ -13,9 +13,9 @@ return (
     <div>
       <AppNavbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/collection" element={<Collection />} />
+        <Route path="/Store" element={<Store />} />
         <Route path="/Contactus" element={<Contact />} />
         <Route path="/Aboutus" element={<Aboutus/>} />
 
